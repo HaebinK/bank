@@ -6,7 +6,7 @@ const app = express()
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: false }))
 
-class Account { // declare
+class Account { 
     constructor(balance) {
         this.balance = balance
     }
@@ -25,7 +25,7 @@ class Account { // declare
     
 }
 
-let myAccount = new Account(30000) // initialize with 30000 of balance
+let myAccount = new Account(0) 
 
 app.get('/', (req, res) => {
     res.render('main.ejs')
